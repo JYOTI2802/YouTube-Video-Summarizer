@@ -1,0 +1,33 @@
+<!-- templates/summary.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .container {
+            text-align: center;
+        }
+        .summary-box {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: justify; /* Justify the text */
+        }
+        .title {
+            text-align: left; /* Align title to the left */
+            margin-top: 10px; /* Adjust top margin */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Summary of YouTube Transcript</h1>
+        <div class="summary-box">
+            <p>{{ summary }}</p>
+        </div>
+    </div>
+</body>
+</html>
