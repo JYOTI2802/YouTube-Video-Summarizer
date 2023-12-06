@@ -1,1 +1,47 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter YouTube Video Link</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container h1,
+        .container form {
+            width: 45%; 
+            margin-bottom: 30px;
+        }
+
+        .container h1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .container h1 img {
+            margin-right: 10px; 
+            height: 30px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="/static/youtube_logo.png"  height="35"> 
+            Enter YouTube Video Link
+        </h1>
+        <form action="/submit" method="GET">
+            <label for="youtube_url">YouTube Video URL:</label>
+            <input type="text" id="youtube_url" name="youtube_url" required>
+            <br>
+        </br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
 
